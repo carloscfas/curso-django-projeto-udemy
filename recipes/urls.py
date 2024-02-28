@@ -12,7 +12,9 @@ from . import views
 #    return HttpResponse('Sobre')
     # return HTTP Response
 
+app_name = 'recipes'
+
 urlpatterns = [
-    path('', views.home), # Home
-    path('recipes/<int:id>/', views.recipe),
+    path('', views.home, name="home"), # Home
+    path('recipes/<int:id>/', views.recipe, name="recipe"),
 ]
